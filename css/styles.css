@@ -1,0 +1,44 @@
+body {
+  background-color: lightblue;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75%;
+  /* width: 75%; */
+}
+
+.gameBoard {
+  border: 1px solid black;
+  justify-content: space-evenly;
+}
+
+.gameCard {
+  border: 1px solid black;
+  height: 24%;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.button_container {
+  align-self: center;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+}
