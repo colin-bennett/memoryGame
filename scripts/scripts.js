@@ -1,22 +1,43 @@
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+  var timer = duration,
+    minutes,
+    seconds;
+  setInterval(function() {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+    display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
 }
 
-window.onload = function () {
-    var fiveMinutes = 60,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+window.onload = function() {
+  var fiveMinutes = 60,
+    display = document.querySelector("#time");
+  startTimer(fiveMinutes, display);
 };
+
+// Card flip function
+
+let card = document.querySelector(".card");
+card.addEventListener("click", function() {
+  card.classList.toggle("is-flipped");
+});
+
+/*
+const section = document.querySelector("section");
+section.addEventListener("click", clickFunction(e));
+
+function clickFunction(e) {
+  if (e.target.classList.contains("card__face--front")) {
+    section.classList.toggle("is-flipped");
+  } else {
+  }
+}
+*/
