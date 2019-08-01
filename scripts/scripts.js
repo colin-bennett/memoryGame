@@ -24,36 +24,9 @@ window.onload = function() {
 };
 
 // Card flip function
-
-let card = document.querySelector(".card");
-card.addEventListener("click", function() {
-  card.classList.toggle("is-flipped");
-});
-
-/*
-const section = document.querySelector("section");
-section.addEventListener("click", clickFunction(e));
+const gameBoard = document.querySelector(".gameBoard");
+gameBoard.addEventListener("click", clickFunction);
 
 function clickFunction(e) {
-  if (e.target.classList.contains("card__face--front")) {
-    section.classList.toggle("is-flipped");
-  } else {
-  }
+  e.target.parentNode.classList.toggle("is-flipped");
 }
-*/
-
-// Loop for generating 12 cards within game board
-/*
-const board = document.querySelector(".gameBoard");
-for (let i = 0; i < 12; i++) {
-  const div = document.createElement("div");
-  div.classList.add("cardContainer");
-  div.innerHTML = `
-    <div class="card">
-      <div class="card__face card__face--front">front</div>
-      <div class="card__face card__face--back">back</div>
-    </div>
-  `;
-  board.append(div);
-}
-*/
