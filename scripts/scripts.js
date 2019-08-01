@@ -25,7 +25,7 @@ window.onload = function() {
 
 // Card flip function
 
-let card = document.querySelector(".card");
+/*let card = document.querySelector(".card");
 card.addEventListener("click", function() {
   card.classList.toggle("is-flipped");
 });
@@ -41,3 +41,16 @@ function clickFunction(e) {
   }
 }
 */
+
+const board = document.querySelector(".gameBoard");
+for (let i = 0; i < 12; i++) {
+  const div = document.createElement("div");
+  div.classList.add("cardContainer");
+  div.innerHTML = `
+    <div class="card">
+      <div class="card__face card__face--front">front</div>
+      <div class="card__face card__face--back">back</div>
+    </div>
+  `;
+  board.append(div);
+}
