@@ -25,7 +25,7 @@ window.onload = function() {
 
 // Card flip function
 
-/*let card = document.querySelector(".card");
+let card = document.querySelector(".card");
 card.addEventListener("click", function() {
   card.classList.toggle("is-flipped");
 });
@@ -42,6 +42,8 @@ function clickFunction(e) {
 }
 */
 
+// Loop for generating 12 cards within game board
+/*
 const board = document.querySelector(".gameBoard");
 for (let i = 0; i < 12; i++) {
   const div = document.createElement("div");
@@ -54,3 +56,4 @@ for (let i = 0; i < 12; i++) {
   `;
   board.append(div);
 }
+*/
