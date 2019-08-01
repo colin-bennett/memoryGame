@@ -1,5 +1,7 @@
 body {
-  background-color: lightblue;
+  font-family: "Baloo Chettan", cursive;
+  /* background-color: lightblue; */
+  background-image: url(/assets/backgroundsnow.png);
   height: 100vh;
   margin: 0;
   padding: 10px;
@@ -15,19 +17,48 @@ section {
   display: flex;
   flex-wrap: wrap;
   height: 75%;
-  
 }
 
 .gameBoard {
-  border: 1px solid black;
   justify-content: space-evenly;
 }
 
-.gameCard {
-  border: 1px solid black;
+.cardContainer {
   height: 24%;
   width: 30%;
+  /* width: 200px;
+  height: 260px;
+  perspective: 600px; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  border: 1px solid black;
   border-radius: 10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: lightcoral;
+}
+
+.card__face--back {
+  background: lightblue;
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
 }
 
 .button_container {
@@ -41,10 +72,8 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .gameCard {
-    border: 1px solid black;
+  .cardContainer {
     height: 30%;
     width: 22%;
-    border-radius: 10px;
   }
 }
