@@ -15,7 +15,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   height: 75%;
-  /* width: 75%; */
+  
 }
 
 .gameBoard {
@@ -41,4 +41,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .gameCard {
+    border: 1px solid black;
+    height: 30%;
+    width: 22%;
+    border-radius: 10px;
+  }
 }
