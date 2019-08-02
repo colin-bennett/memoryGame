@@ -50,32 +50,30 @@ section {
   background-position: fixed;
   background: no-repeat;
   background-image: url(/assets/penquin.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
-  background-size: 100%; 
+  background-size: 100%;
 }
 
 .card__face--back {
   transform: rotateY(180deg);
   background: no-repeat;
-    
 }
 
 .arctic_fox {
   background-position: fixed;
-    background: no-repeat;
-    background: url(/assets/arctic\ fox.jpeg);
-    max-width: 100%; 
-    max-height: 100%;
-    background-size: 100%; 
-
+  background: no-repeat;
+  background: url(/assets/arctic\fox.jpeg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: 100%;
 }
 
 .polarbear {
   background-position: fixed;
   background: no-repeat;
   background: url(/assets/polarbear.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   background-size: 100%;
 }
@@ -84,7 +82,7 @@ section {
   background-position: fixed;
   background: no-repeat;
   background: url(/assets/puffin.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   background-size: 100%;
 }
@@ -93,7 +91,7 @@ section {
   background-position: fixed;
   background: no-repeat;
   background: url(/assets/seal.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   background-size: 100%;
 }
@@ -102,7 +100,7 @@ section {
   background-position: fixed;
   background: no-repeat;
   background: url(/assets/walrus.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   background-size: 100%;
 }
@@ -111,7 +109,7 @@ section {
   background-position: fixed;
   background: no-repeat;
   background: url(/assets/whale.jpg);
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   background-size: 100%;
 }
@@ -142,67 +140,65 @@ footer {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/penquin.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
-    background-size: 100%; 
+    background-size: 100%;
   }
 
   .card__face--back {
     transform: rotateY(180deg);
-    
   }
 
   .arctic_fox {
     background-position: fixed;
-      background: no-repeat;
-      background: url(/assets/arctic\ fox.jpeg);
-      max-width: 100%; 
-      max-height: 100%;
-      background-size: 100%; 
-  
+    background: no-repeat;
+    background: url(/assets/arctic\fox.jpeg);
+    max-width: 100%;
+    max-height: 100%;
+    background-size: 100%;
   }
-  
+
   .polarbear {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/polarbear.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     background-size: 100%;
   }
-  
+
   .puffin {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/puffin.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     background-size: 100%;
   }
-  
+
   .seal {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/seal.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     background-size: 100%;
   }
-  
+
   .walrus {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/walrus.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     background-size: 100%;
   }
-  
+
   .whale {
     background-position: fixed;
     background: no-repeat;
     background: url(/assets/whale.jpg);
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     background-size: 100%;
   }
@@ -215,4 +211,3 @@ footer {
     align-self: center;
   }
 }
-
