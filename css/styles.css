@@ -39,7 +39,6 @@ section {
 }
 
 .card__face {
-  border: 1px solid black;
   border-radius: 10px;
   position: absolute;
   height: 100%;
@@ -58,6 +57,7 @@ section {
 
 .card__face--back {
   transform: rotateY(180deg);
+  background: no-repeat;
     
 }
 
@@ -74,7 +74,7 @@ section {
 .polarbear {
   background-position: fixed;
   background: no-repeat;
-  background: url(/assets/arctic\ fox.jpeg);
+  background: url(/assets/polarbear.jpg);
   max-width: 100%; 
   max-height: 100%;
   background-size: 100%;
@@ -126,8 +126,10 @@ section {
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -20px;
+  text-align: right;
+  align-self: center;
 }
 
 @media (min-width: 768px) {
@@ -205,5 +207,12 @@ footer {
     background-size: 100%;
   }
 
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    text-align: right;
+    align-self: center;
+  }
 }
 

@@ -18,9 +18,9 @@ function startTimer(duration, display) {
 }
 
 window.onload = function() {
-  var fiveMinutes = 60,
+  var oneMinutes = 60,
     display = document.querySelector("#time");
-  startTimer(fiveMinutes, display);
+  startTimer(oneMinutes, display);
 };
 
 // Card flip function
@@ -30,3 +30,5 @@ gameBoard.addEventListener("click", clickFunction);
 function clickFunction(e) {
   e.target.parentNode.classList.toggle("is-flipped");
 }
+
+
