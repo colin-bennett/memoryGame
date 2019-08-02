@@ -30,5 +30,3 @@ gameBoard.addEventListener("click", clickFunction);
 function clickFunction(e) {
   e.target.parentNode.classList.toggle("is-flipped");
 }
-
-
