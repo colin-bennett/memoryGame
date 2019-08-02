@@ -1,3 +1,27 @@
+document.querySelector(".start").addEventListener("click", startFunction);
+
+function startFunction() {
+  console.log("start was clicked")
+  let display = document.querySelector("#time");
+  startTimer(0, display);
+}
+
+function startTimer(startTime, display) {
+  var timer = startTime,
+    minutes,
+    seconds;
+  setInterval(function() {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = minutes + ":" + seconds;
+    if (++timer < 0) {
+      timer = startTimer;
+    }
+  }, 1000);
+ }
+
 const cards = document.querySelectorAll(".gameCard");
 
 let hasFlippedCard = false;

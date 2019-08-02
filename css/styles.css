@@ -61,6 +61,14 @@ section {
   transform: rotateY(180deg);
 }
 
+.button_container {
+   display: flex;
+   justify-content: center;
+}
+
+button {
+  background-color: lightgray;
+}
 footer {
   width: 100%;
   position: absolute;
