@@ -43,6 +43,10 @@ section {
   transform: rotateY(180deg);
 }
 
+.gameCard.hide {
+  opacity: 0;
+}
+
 .gameCard:active {
   transform: scale(0.97);
   transition: transform 0.2s;

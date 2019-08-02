@@ -27,6 +27,7 @@ const cards = document.querySelectorAll(".gameCard");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+// let matches = 0;
 
 function flipCard() {
   if (lockBoard) return;
@@ -48,9 +49,21 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    setTimeout(function() {
+      hideCards();
+    }, 1500);
+  } else {
+    unflipCards();
+  }
 }
 
+function hideCards() {
+  firstCard.classList.add("hide");
+  secondCard.classList.add("hide");
+
+  resetBoard();
+}
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
@@ -83,21 +96,12 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-// Shuffle Function
-let shuffleCard = [...document.querySelectorAll(".gameCard")];
-function shuffle(array) {
-  let currentIndex = array.length;
-  let temporaryValue;
-  let randomIndex;
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-console.log(cards);
-shuffle(cards);
-console.log(shuffle(cards));
+// function youWin() {
+//   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+//   let matches = 0;
+//   if (isMatch === true) {
+//     matches = matches + 2;
+//   }
+// }
+// youWin();
+// console.log(matches);
