@@ -72,6 +72,30 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
+//game timer
+let second = 0,
+  minute = 0;
+hour = 0;
+let timer = document.querySelector(".timer");
+let interval;
+
+function startTimer() {
+  interval = setInterval(function() {
+    timer.innerHTML = `${minute} mins ${second} secs`;
+    second++;
+    if (second == 60) {
+      minute++;
+      second = 0;
+    }
+    if (minute == 60) {
+      hour++;
+      minute = 0;
+    }
+  }, 1000);
+}
+startTimer();
+// document.querySelector(".restart").addEventListener("click", startTimer(0));
+
 // function youWin() {
 //   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 //   let matches = 0;

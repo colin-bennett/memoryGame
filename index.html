@@ -9,12 +9,13 @@
       href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/512a6752d0.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <h1>Penguin Pairs</h1>
-      <div><span id="time">01:00</span></div>
+      <div class="timer"></div>
     </header>
 
     <section class="gameBoard">
@@ -80,8 +81,10 @@
     </section>
 
     <div class="button_container">
-      <button class="reset">START</button>
-      <button class="start">RESET</button>
+      <button class="start">START</button>
+      <button onclick="window.location.reload();" class="restart">
+        <i class="fas fa-undo-alt fa-2x"></i>
+      </button>
     </div>
 
     <footer>
