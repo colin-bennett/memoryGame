@@ -9,12 +9,18 @@
       href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/512a6752d0.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <h1>Penguin Pairs</h1>
-      <div><span id="time">00:00</span></div>
+      <div class="button_container">
+        <i class="start fas fa-play fa-lg"></i>
+        <span id="time">00:00</span>
+
+        <i class="reset fas fa-undo-alt fa-lg"></i>
+      </div>
     </header>
 
     <section class="gameBoard">
@@ -79,10 +85,6 @@
       </div>
     </section>
 
-    <div class="button_container">
-      <button class="start">START</button>
-      <button class="reset">RESET</button>
-    </div>
 
     <footer>
       <p>Created By: The Purple Penguins!</p>
