@@ -24,6 +24,15 @@ section {
   height: 75%;
 }
 
+i {
+  margin: 10px 20px;
+}
+
+#time {
+  margin: 10px 20px;
+  font-size: 25px;
+}
+
 .gameBoard {
   justify-content: space-evenly;
 }
@@ -66,19 +75,20 @@ section {
 }
 
 .button_container {
-   display: flex;
-   justify-content: center;
-}
+display: flex;
+justify-content: center;
+align-items: baseline;
+  }
 
 button {
   background-color: lightgray;
+  padding: 20px;
+  border-color: lightblue;
 }
 footer {
   width: 100%;
-  position: absolute;
   bottom: -20px;
   text-align: right;
-  align-self: center;
 }
 
 /* --- Desktop Styling Below ------------------------------------ */

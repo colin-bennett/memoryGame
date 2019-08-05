@@ -6,6 +6,12 @@ function startFunction() {
   startTimer(0, display);
 }
 
+document.querySelector(".reset").addEventListener("click", reloadPage);
+
+function reloadPage() {
+  document.location.reload();
+}
+
 function startTimer(startTime, display) {
   var timer = startTime,
     minutes,
