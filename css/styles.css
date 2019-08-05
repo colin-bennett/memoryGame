@@ -24,6 +24,15 @@ section {
   height: 75%;
 }
 
+i {
+  margin: 10px 20px;
+}
+
+#time {
+  margin: 10px 20px;
+  font-size: 25px;
+}
+
 .gameBoard {
   justify-content: space-evenly;
 }
@@ -66,31 +75,72 @@ section {
 }
 
 .button_container {
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 button {
-  background-color: transparent;
-  display: block;
-  /* outline: none; */
-  /* border: none; */
+  background-color: lightgray;
+  padding: 20px;
+  border-color: lightblue;
 }
-
-.timer {
-  font-size: 20px;
-}
-
-/* button {
-  color: white;
-  background: blue;
-} */
-
 footer {
   width: 100%;
-  position: absolute;
   bottom: -20px;
   text-align: right;
-  align-self: center;
+}
+
+/* modal styling */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+}
+
+img {
+  height: 80%;
+  width: 80%;
 }
 
 /* --- Desktop Styling Below ------------------------------------ */
@@ -99,5 +149,16 @@ footer {
   .gameCard {
     height: 30%;
     width: 22%;
+  }
+
+  img {
+    height: 50%;
+    width: 50%;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
   }
 }
