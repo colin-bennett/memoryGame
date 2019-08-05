@@ -1,7 +1,7 @@
 document.querySelector(".start").addEventListener("click", startFunction);
 
 function startFunction() {
-  console.log("start was clicked")
+  console.log("start was clicked");
   let display = document.querySelector("#time");
   startTimer(0, display);
 }
@@ -26,7 +26,7 @@ function startTimer(startTime, display) {
       timer = startTimer;
     }
   }, 1000);
- }
+}
 
 const cards = document.querySelectorAll(".gameCard");
 
@@ -52,10 +52,12 @@ function flipCard() {
 
   checkForMatch();
 }
-
+let matches = 0;
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
   if (isMatch) {
+    matches += 2;
+    youWin();
     setTimeout(function() {
       hideCards();
     }, 1500);
@@ -102,12 +104,29 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-// function youWin() {
-//   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-//   let matches = 0;
-//   if (isMatch === true) {
-//     matches = matches + 2;
-//   }
-// }
-// youWin();
-// console.log(matches);
+//if you win, open modal//
+function youWin() {
+  if (matches === 12) {
+    startTimer();
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
+}
